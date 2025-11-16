@@ -38,10 +38,14 @@ ram.runtime = "50M"
     default = "/privatebin"
 
     [install.init_main_permission]
-    help.en = "If private, only YunoHost users can create a paste, but everyone can read it."
-    help.fr = "Si privé, seul les utilisateurs YunoHost peuvent créer un paste, mais tout le monde peut lire."
+    help.en = "Choose who can create new pastes."
     type = "group"
-    default = "visitors"
+    default = "all_users"
+
+    [install.init_pastes_permission]
+    help.en = "Choose who can view previously created pastes."
+    type = "group"
+    default = "all_users"
 
     [install.language]
     ask.en = "Choose the application language"
@@ -66,6 +70,7 @@ ram.runtime = "50M"
     
     [resources.permissions]
     main.url = "/"
+    pastes.additional_urls = "re:/%?%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x#%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w%w$"
 
     [resources.apt]
     packages = "php8.4-gd, zlib1g-dev"
