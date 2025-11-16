@@ -42,7 +42,7 @@ ram.runtime = "50M"
     type = "group"
     default = "all_users"
 
-    [install.init_pastes_permission]
+    [install.init_bins_permission]
     ask.en = "Who should be able to view previously created pastes? (This can be changed later)"
     type = "group"
     default = "all_users"
@@ -70,7 +70,7 @@ ram.runtime = "50M"
     
     [resources.permissions]
     main.url = "/"
-    pastes.additional_urls = ['re:/\?[a-f0-9]{16}#[[:alnum:]]{44}$']
+    bins.additional_urls = ['re:/\?[a-f0-9]{16}#[[:alnum:]]{44}$']
 
     [resources.apt]
     packages = "php8.4-gd, zlib1g-dev"
